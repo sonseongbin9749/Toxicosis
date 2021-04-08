@@ -6,13 +6,18 @@ public class EnemyMove : MonoBehaviour
 {
 
     [SerializeField]
+    private long score = 10;
+    [SerializeField]
     private int hp = 1;
     [SerializeField]
     private float speed = 50;
 
     private bool isDamaged = false;
+    
+    private Gamemanager gameManager = null;
     void Start()
     {
+        gameManager = FindObjectOfType<Gamemanager>();
 
     }
 
@@ -35,6 +40,7 @@ public class EnemyMove : MonoBehaviour
                 StartCoroutine(Damaged());
                 return;
             }
+            gameManager.AddScore(score);//게임 메니저에 있는 점수만큼 스코어를 올린다 gameManager(소문자 : 변수)
             Destroy(gameObject);
             
         }

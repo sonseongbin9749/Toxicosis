@@ -1,0 +1,36 @@
+diff a/Assets/Prefabs/Bullet.prefab b/Assets/Prefabs/Bullet.prefab	(rejected hunks)
+@@ -8,25 +8,26 @@
+   m_PrefabAsset: {fileID: 0}
+   serializedVersion: 6
+   m_Component:
+-  - component: {fileID: 6645105237564676095}
+-  - component: {fileID: 298136677584356434}
+-  - component: {fileID: -6324279095242473188}
+-  - component: {fileID: 441010883299771351}
+-  - component: {fileID: 2922880206108207195}
+-  m_Layer: 6
++  - component: {fileID: 2731564617079215881}
++  - component: {fileID: 2731564617079215880}
++  - component: {fileID: 2731564617079215886}
++  - component: {fileID: 1937631862274513649}
++  - component: {fileID: 2829506805782604906}
++  - component: {fileID: 6839827114309404805}
++  m_Layer: 9
+   m_Name: Bullet
+   m_TagString: Bullet
+   m_Icon: {fileID: 0}
+   m_NavMeshLayer: 0
+   m_StaticEditorFlags: 0
+   m_IsActive: 1
+---- !u!4 &6645105237564676095
++--- !u!4 &2731564617079215881
+ Transform:
+   m_ObjectHideFlags: 0
+   m_CorrespondingSourceObject: {fileID: 0}
+   m_PrefabInstance: {fileID: 0}
+   m_PrefabAsset: {fileID: 0}
+-  m_GameObject: {fileID: 316271422432017753}
++  m_GameObject: {fileID: 2731564617079215883}
+   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+   m_LocalPosition: {x: 0, y: 0, z: 0}
+   m_LocalScale: {x: 1, y: 1, z: 1}

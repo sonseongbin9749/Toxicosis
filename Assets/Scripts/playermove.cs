@@ -14,11 +14,18 @@ public class playermove : MonoBehaviour
 
     [SerializeField]
     private float speed = 5f;
+
     private Vector2 targetPosition = Vector2.zero;
+    private Gamemanager gameManager = null;
+    
+    
+       
     void Start()
     {
-        StartCoroutine(Fire()); // 이 코드를 꼭 써줘야함 Fire()할떄
-        Fire();
+        gameManager = FindObjectOfType<Gamemanager>();
+    
+    StartCoroutine(Fire()); // 이 코드를 꼭 써줘야함 Fire()할때
+        
 
     }
 
@@ -51,6 +58,9 @@ public class playermove : MonoBehaviour
     }
 
 
-
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        gameManager.Dead();
+    }
 
 }

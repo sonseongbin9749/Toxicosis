@@ -6,7 +6,7 @@ public class BulletMove : MonoBehaviour
 {
    
     [SerializeField]
-    private float speed = 50f;
+    private float speed = 30f;
     
     void Start()
     {
