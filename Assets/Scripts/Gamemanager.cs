@@ -11,14 +11,18 @@ public class Gamemanager : MonoBehaviour
     private Text textScore = null;
     [SerializeField]
     private GameObject enemyCroissantPrefab = null;
-    
-    private long score = 0;
-    
     [SerializeField]
     private int life = 3;
-    
+    public Vector2 MinPosition { get; private set;}//구분하기 위해서 Min~~ 대문자로 씀
+
+    public Vector2 MaxPosition { get; private set;} //해킹 방지, 여기에서만 변경 가능
+    private long score = 0;
+
     void Start()
+    
     {
+        MinPosition = new Vector2(-7f, -12f);//f쓰는 이유는 float이기 때문 안쓰면 오류남
+        MaxPosition = new Vector2(7f, 12f);
         StartCoroutine(SpawnCroissant());
     }
     public void AddScore(long addScore)//밖에서 접근하지만 변수는 건들지 못함 (변수를 감싼다)
@@ -34,10 +38,14 @@ public class Gamemanager : MonoBehaviour
     }
 
     public void UpdateDead()
+    {
+        textLife.text = string.Format("Life : {0}", life);
+  
+    }
     public void Dead()
     {
         life--;
-        UpdateUI();
+        UpdateDead();
         if(life <= 0)
         {
             SceneManager.LoadScene("GameOver");
@@ -45,10 +53,7 @@ public class Gamemanager : MonoBehaviour
     }
    
 
-    public void UpdateUI()
-    {
-        textLife.text = string.Format("Life\n{0}", life);
-    }
+    
     private IEnumerator SpawnCroissant() //대기시간
 
     {

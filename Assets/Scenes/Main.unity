@@ -583,7 +583,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletPosition: {fileID: 1427529782}
   bulletPrefab: {fileID: 316271422432017753, guid: 4b89c6edf0a66a548b60a6c7115455f7, type: 3}
-  speed: 100
+  speed: 50
 --- !u!50 &1190588417
 Rigidbody2D:
   serializedVersion: 4
@@ -746,6 +746,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21543cee3c7ea9a498834b0c523825a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  textLife: {fileID: 1830811239}
   textScore: {fileID: 960038791}
   enemyCroissantPrefab: {fileID: 8559540226282812842, guid: 5975a4d42365d2b43a22f985cdad58c2, type: 3}
   life: 3

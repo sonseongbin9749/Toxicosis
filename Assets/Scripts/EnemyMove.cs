@@ -10,7 +10,7 @@ public class EnemyMove : MonoBehaviour
     [SerializeField]
     private int hp = 1;
     [SerializeField]
-    private float speed = 50;
+    private float speed = 25;
 
     private bool isDamaged = false;
     
@@ -25,6 +25,11 @@ public class EnemyMove : MonoBehaviour
     void Update()
     {
         transform.Translate(Vector2.down * speed * Time.deltaTime);
+        if(transform.localPosition.y < gameManager.MinPosition.y)
+        {
+            gameManager.Dead();
+            Destroy(gameObject);
+        }
     }
 
     
